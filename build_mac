@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+
+wails build
+rm -rf  /Volumes/EasyClash/EasyClash.app
+mv ./build/bin/EasyClash.app /Volumes/EasyClash
+
+open /Volumes/EasyClash/

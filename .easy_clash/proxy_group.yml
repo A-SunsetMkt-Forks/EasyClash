@@ -1,0 +1,9 @@
+- name: Proxy
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 3600
+  proxies: []
+  enable: true
+  cal-del: false
+  can-edit: true
+  can-disable: false

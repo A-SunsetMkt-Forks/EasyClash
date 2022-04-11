@@ -1,0 +1,44 @@
+ads:
+  type: http
+  behavior: domain
+  proxy-group: REJECT
+  url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+  path: /Users/sandao/.easy_clash/ruleset/ads.yml
+  interval: 86400
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false
+applications:
+  type: http
+  behavior: classical
+  proxy-group: DIRECT
+  url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+  path: /Users/sandao/.easy_clash/ruleset/applications.yml
+  interval: 86400
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false
+gfw:
+  type: http
+  behavior: domain
+  proxy-group: Proxy
+  url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+  path: /Users/sandao/.easy_clash/ruleset/gfw.yml
+  interval: 86400
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false
+lancidr:
+  type: http
+  behavior: ipcidr
+  proxy-group: DIRECT
+  url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+  path: /Users/sandao/.easy_clash/ruleset/lancidr.yml
+  interval: 86400
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false

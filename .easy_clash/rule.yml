@@ -1,0 +1,14 @@
+- type: GEOIP
+  token: CN
+  proxygroup: DIRECT
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false
+- type: MATCH
+  token: ""
+  proxygroup: Proxy
+  enable: true
+  cal-del: false
+  can-edit: false
+  can-disable: false
