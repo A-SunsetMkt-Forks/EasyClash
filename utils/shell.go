@@ -140,7 +140,14 @@ func KillProcess(pid int) bool {
 	if pid == 0 {
 		return false
 	}
-	killErr := syscall.Kill(pid, syscall.SIGKILL)
+
+	p, err := os.FindProcess(pid)
+
+	if err != nil {
+		return false
+	}
+
+	killErr := p.Signal(syscall.SIGKILL)
 	return killErr == nil
 }
 
