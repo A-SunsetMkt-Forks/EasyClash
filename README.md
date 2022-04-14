@@ -2,7 +2,7 @@
 
 A configuration manager app about [clash](https://github.com/Dreamacro/clash).
 
-[Donwload EasyClash](https://github.com/daodao97/EasyClash/releases)
+Support: `Macos Intel`, `Macos M1`, ~`Win`~  [Donwload EasyClash](https://github.com/daodao97/EasyClash/releases)
 
 ## Preview
 
