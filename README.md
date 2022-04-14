@@ -2,7 +2,7 @@
 
 A configuration manager app about [clash](https://github.com/Dreamacro/clash).
 
-[download EasyClash](https://github.com/daodao97/EasyClash/releases)
+[Donwload EasyClash](https://github.com/daodao97/EasyClash/releases)
 
 ## Preview
 
