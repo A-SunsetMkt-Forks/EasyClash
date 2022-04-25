@@ -15,6 +15,7 @@ export const useAppStore = defineStore({
       proxyDownload: {}
     },
     clashConnMsgId: {},
+    proxyDownload: {},
     baseConf: {}
   }),
   actions: {
@@ -47,24 +48,44 @@ export const useAppStore = defineStore({
       wsMessage({
         ws: 'ws://' + window.BaseApi + '/connections',
         onmessage: (msg) => {
-          const proxyDownload = {};
+          const currentIds = [];
           (msg?.connections || []).forEach(item => {
             this.clashConnMsgId[item.id] = item
+            currentIds.push(item.id)
           })
 
+          const proxyDownload = {}
           Object.values(this.clashConnMsgId).forEach(item => {
             const proxy = item.chains[item.chains.length - 1]
-            if (proxyDownload[proxy]) {
-              proxyDownload[proxy] += item.download
+            if (currentIds.indexOf(item.id) === -1) {
+              if (this.proxyDownload[proxy]) {
+                this.proxyDownload[proxy] += item.download
+              } else {
+                this.proxyDownload[proxy] = item.download
+              }
+              delete this.clashConnMsgId[item.id]
             } else {
-              proxyDownload[proxy] = item.download
+              if (proxyDownload[proxy]) {
+                proxyDownload[proxy] += item.download
+              } else {
+                proxyDownload[proxy] = item.download
+              }
+            }
+          })
+
+          Object.keys(this.proxyDownload).forEach(item => {
+            const num = this.proxyDownload[item]
+            if (proxyDownload[item]) {
+              proxyDownload[item] += num
+            } else {
+              proxyDownload[item] = num
             }
           })
 
           this.clashConnInfo = {
             uploadTotal: msg.uploadTotal,
             downloadTotal: msg.downloadTotal,
-            connNum: msg?.connections?.length,
+            connNum: Object.keys(this.clashConnMsgId).length,
             proxyDownload: proxyDownload
           }
         }
