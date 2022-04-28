@@ -42,6 +42,7 @@ export const useAppStore = defineStore({
         proxyDownload: {}
       }
       this.clashConnMsgId = {}
+      this.proxyDownload = {}
     },
     clashConnInfoWatcher() {
       console.log('clashConnInfoWatcher')
