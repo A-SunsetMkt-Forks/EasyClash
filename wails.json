@@ -1,21 +1,7 @@
 {
   "name": "EasyClash",
-  "assetdir": "frontend/dist",
-  "frontend:build": "",
-  "frontend:install": "",
-  "frontend:dev": "",
-  "wailsjsdir": "frontend/src",
-  "version": "2",
-  "Path": "",
-  "BuildDir": "",
-  "outputfilename": "EasyClash",
-  "OutputType": "",
-  "Platform": "",
-  "Author": {
-    "name": "",
-    "email": ""
-  },
-  "debounceMS": 100,
-  "devserverurl": "http://localhost:34115",
-  "appargs": ""
+  "frontend:install": "pnpm install",
+  "frontend:build": "pnpm run build",
+  "frontend:dev:watcher": "pnpm run dev",
+  "frontend:dev:serverUrl": "http://localhost:3000"
 }
