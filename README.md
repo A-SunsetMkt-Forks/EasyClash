@@ -11,3 +11,20 @@ Support: `Macos Intel`, `Macos M1`, ~`Win`~  [Donwload EasyClash](https://github
 ## Add ProxyProvider
 
 ![](./images/add_proxy.jpg)
+
+
+## QA
+
+![](./images/qa_1.png)
+
+```shell
+sudo xattr -r -d com.apple.quarantine /Applications/EasyClash.app
+```
+
+```shell
+# 1
+sudo spctl --master-disable
+
+# 2
+系统偏好设置 > 安全性与隐私 > 任何来源
+```
