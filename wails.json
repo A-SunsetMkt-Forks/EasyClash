@@ -1,31 +1,12 @@
 {
   "name": "EasyClash",
-  "frontend:build": "pnpm run build",
+  "outputfilename": "EasyClash",
   "frontend:install": "pnpm install",
-  "frontend:dev": "",
-  "frontend:dev:watcher": "pnpm run dev",
-  "wailsjsdir": "./frontend",
-  "version": "2",
-  "Path": "",
-  "BuildDir": "",
-  "outputfilename": "",
-  "OutputType": "",
-  "Platform": "",
-  "runNonNativeBuildHooks": false,
-  "postBuildHooks": null,
-  "Author": {
-    "name": "",
-    "email": ""
-  },
-  "Info": {
-    "companyName": "EasyClash",
-    "productName": "EasyClash",
-    "productVersion": "1.0.0",
-    "copyright": "Copyright.........",
-    "comments": "Built using Wails (https://wails.app)"
-  },
-  "debounceMS": 100,
-  "devserverurl": "http://localhost:34115",
-  "appargs": "",
-  "nsisType": ""
+  "frontend:build": "pnpm build",
+  "frontend:dev:watcher": "pnpm dev",
+  "frontend:dev:serverUrl": "http://localhost:3000",
+  "author": {
+    "name": "daodao97",
+    "email": "daodao97@foxmail.com"
+  }
 }
