@@ -13,7 +13,7 @@
 	<key>NSHumanReadableCopyright</key><string>{{.Info.Copyright}}</string>
 	<key>NSAppTransportSecurity</key>
     <dict>
-        <key>NSAllowsArbitraryLoads</key>
+        <key>NSAllowsArbitraryLoads</key>	
         <true/>
         <key>NSExceptionDomains</key>
         <dict>
